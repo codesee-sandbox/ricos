@@ -20,7 +20,35 @@ message Common {
 }
 
 message Spoiler {
-    google.protobuf.BoolValue enabled = 1;
+    google.protobuf.BoolValue enabled = 1; //todo probably can be removed
     google.protobuf.StringValue description = 2;
     google.protobuf.StringValue button_content = 3;
+}
+
+message Link {
+    string url = 1;
+    //todo add type for anchor? external/internal link? more? or figure it from the url string?
+    google.protobuf.StringValue target = 2;
+    google.protobuf.StringValue rel = 3;
+}
+
+message PluginContainerData {
+    enum Size {
+        CONTENT = 0;
+        SMALL = 1;
+        ORIGINAL = 2;
+        FULL_WIDTH = 3;
+        CUSTOM = 4;
+    }
+
+    enum Alignment {
+        LEFT = 0;
+        RIGHT = 1;
+        CENTER = 2;
+    }
+
+    Size size = 1;
+    google.protobuf.Int32Value width = 2;
+    Alignment alignment = 3;
+    Spoiler spoiler = 4;
 }
