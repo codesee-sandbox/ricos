@@ -5,17 +5,17 @@ package rich_content;
 import "common.proto";
 import "google/protobuf/wrappers.proto";
 
-message VideoData {
+message ButtonData {
     PluginContainerData container_data = 1;
-    google.protobuf.StringValue src = 2;
-    google.protobuf.StringValue type = 3;
-    google.protobuf.Int32Value width = 4;
-    google.protobuf.Int32Value height = 5;
-    Thumbnail thumbnail = 6;
+    ButtonDesign design = 2;
+    google.protobuf.StringValue text = 3;
+    Link link = 4;
 }
 
-message Thumbnail {
-    google.protobuf.StringValue url = 1;
-    google.protobuf.Int32Value width = 2;
-    google.protobuf.Int32Value height = 3;
+message ButtonDesign {
+    google.protobuf.Int32Value border_radius = 1;
+    google.protobuf.Int32Value border_width = 2;
+    google.protobuf.StringValue text_color = 3;
+    google.protobuf.StringValue background_color = 4;
+    google.protobuf.StringValue border_color = 5;
 }

@@ -9,9 +9,10 @@ message VideoData {
   PluginContainerData container_data = 1;
   google.protobuf.StringValue src = 2;
   google.protobuf.StringValue type = 3;
-  google.protobuf.Int32Value width = 4;
-  google.protobuf.Int32Value height = 5;
-  Thumbnail thumbnail = 6;
+  google.protobuf.Int32Value video_width = 4;
+  google.protobuf.Int32Value video_height = 5;
+  google.protobuf.StringValue alt_text = 6; //todo maybe convert title to alt_text, check if needed
+  Thumbnail thumbnail = 7;
 }
 
 message Thumbnail {
