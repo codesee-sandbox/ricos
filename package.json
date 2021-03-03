@@ -86,6 +86,8 @@
 		"@babel/preset-env": "^7.2.3",
 		"@babel/preset-react": "^7.0.0",
 		"@babel/runtime": "^7.2.0",
+		"@codesee/babel-plugin-instrument": "0.10.1",
+		"@codesee/tracker": "0.10.1",
 		"@hot-loader/react-dom": "^16.11.0",
 		"@knapsack-pro/cypress": "^4.0.0",
 		"@lerna/project": "^3.18.0",

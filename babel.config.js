@@ -16,6 +16,7 @@ const presetEnvCommonJS = [
 const commonPresets = ['@babel/preset-react'];
 
 const commonPlugins = [
+  '@codesee/instrument',
   ['@babel/plugin-proposal-class-properties', { loose: true }],
   '@babel/plugin-transform-runtime',
   '@babel/plugin-syntax-dynamic-import',
